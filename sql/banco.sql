@@ -1,6 +1,6 @@
-create or replace schema curso_mysql collate utf8mb4_general_ci;
+create schema curso_mysql collate utf8mb4_general_ci;
 
-create or replace table clientes
+create  table clientes
 (
 	id int auto_increment
 		primary key,
@@ -16,7 +16,7 @@ create or replace table clientes
 		unique (email)
 );
 
-create or replace table produtos
+create table produtos
 (
 	id int auto_increment
 		primary key,
@@ -24,7 +24,7 @@ create or replace table produtos
 	preco double not null
 );
 
-create or replace table pedidos
+create table pedidos
 (
 	id int auto_increment
 		primary key,
@@ -40,5 +40,5 @@ create or replace table pedidos
 		foreign key (produto_id) references produtos (id)
 );
 
-create or replace index produto_id
+create   index produto_id
 	on pedidos (produto_id);
