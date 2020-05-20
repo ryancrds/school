@@ -1,16 +1,19 @@
 <?php
 
-$path = $_SERVER['PATH_INFO'] ?? "/";
-
-if($path == '/'){
-    require __DIR__  . '/sites/routes.php';
-
-
-} else{
+if(resolve('/admin')){
+    render('oi', 'admin', );
+} 
+elseif(resolve('/admin/pages')){
+    echo 'administraçao de paginas';
+} else {
     echo 'pagina não encontrada';
 }
+
+
 
 
 // } elseif($path == '/sites/contato'){
     
 //     require __DIR__ . '/sites/contato.php';
+
+// $path = $_SERVER['PATH_INFO'] ?? "/";

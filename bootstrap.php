@@ -1,23 +1,27 @@
 <?php
 
-function resolve($route)
-{
+function resolve($route) {
     $path = $_SERVER['PATH_INFO'] ?? '/';
+    
     $route = '/^\/([a-z]+)$/';
 
-    if (preg_match($route, '/')) {
-        echo "deu";
-    } else {
-        echo "não deu";
+    if (preg_match($route, $path, $params)) {
+        return $params;
+    } 
+        
+    return false;
     }
-}
 
-resolve('/');
 
-if ($path == '/') {
-    require __DIR__ . '/sites/contato.php';
-} elseif ($path == '/admin') {
-    require __DIR__ . '/sites/contato.php';
-} else {
-    echo 'pagina não encontrada';
+function render(
+    $content,
+    $template,
+    array $data = []) {
+    return include __DIR__ . '/templates/' . $template . 'tpl.php';
+    }
+
+if (resolve('/admin/?(.*)')) {
+    require __DIR__ . '/admin/routes.php';
+}elseif (resolve('/(.*)')) {
+    require __DIR__ . '/site/routes.php';
 }
