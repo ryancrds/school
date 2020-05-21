@@ -1,7 +1,8 @@
 <?php
 
 if(resolve('/admin')){
-    render('oi', 'admin', );
+    render('admin/home', 'admin/admin', );
+    // render('oi', 'admin', );
 } 
 elseif(resolve('/admin/pages')){
     echo 'administraçao de paginas';

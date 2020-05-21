@@ -1,27 +1,17 @@
 <?php
 
-function resolve($route) {
-    $path = $_SERVER['PATH_INFO'] ?? '/';
-    
-    $route = '/^\/([a-z]+)$/';
+session_start();
 
-    if (preg_match($route, $path, $params)) {
-        return $params;
-    } 
-        
-    return false;
-    }
-
-
-function render(
-    $content,
-    $template,
-    array $data = []) {
-    return include __DIR__ . '/templates/' . $template . 'tpl.php';
-    }
+// require __DIR__ . '/config.php';
+require __DIR__ . '/src/error_handler.php';
+require __DIR__ . '/src/resolvve-routes.php';
+require __DIR__ . '/src/render.php';
+require __DIR__ . '/src/connection.php';
+// require __DIR__ . '/src/flash.php';
+// require __DIR__ . '/src/auth.php';
 
 if (resolve('/admin/?(.*)')) {
     require __DIR__ . '/admin/routes.php';
-}elseif (resolve('/(.*)')) {
+} elseif (resolve('/(.*)')) {
     require __DIR__ . '/site/routes.php';
 }
