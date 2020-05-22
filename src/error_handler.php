@@ -4,9 +4,9 @@ function setInternalServerError($errno = null, $errstr = null, $errfile = null, 
     // http_response_code(500);
     // echo '<h1>Error</h1>';
 
-    // if (!DEBUG) {
-    //     exit;
-    // }
+   if (!DEBUG) {
+       exit;
+    }
 
     if (is_object($errno)) {
         $err = $errno;

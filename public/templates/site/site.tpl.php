@@ -15,12 +15,12 @@
             background-color: #f5f5f5;
         }
     </style>
-    <title>App do Ryan</title>
+    <title>Esteticar</title>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">AppRyan</a>
+        <a class="navbar-brand" href="#">EstetiCar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -50,3 +50,4 @@
 </body>
 
 </html>
+
