@@ -5,7 +5,6 @@ function render(
     $template,
     array $data = []
 ) {
-    $content = __DIR__ .'/../public/templates/'.$content.'.tpl.php';
-    return include __DIR__ . '/../public/templates/' . $template . '.tpl.php';
+    $content = __DIR__ .'/../templates/'.$content.'.tpl.php';
     return include __DIR__ . '/../templates/' . $template . '.tpl.php';
 }

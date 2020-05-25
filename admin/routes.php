@@ -3,11 +3,20 @@
 if (resolve('/admin')) {
     render('admin/home', 'admin/admin',);
 } 
+elseif (resolve('/admin/users/create')) {
+
+    render('admin/users/create', 'admin/admin');
+}
+elseif (resolve('/admin/pages/create')) {
+
+    render('admin/pages/create', 'admin/admin');
+}
 elseif (resolve('/admin/users')) {
+    
     render('admin/users/index', 'admin/admin');
-} 
-elseif (resolve('/admin/pages')) 
-{
+}
+ elseif (resolve('/admin/pages')) {
+
     render('admin/pages/index', 'admin/admin');
 } 
 elseif (resolve('/admin/pages/(\d)+')) 
