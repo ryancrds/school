@@ -1,4 +1,4 @@
-<h3>Administraçao de paginas</h3>
+<h3>Nova paginas</h3>
 
 <form action="" method="POST">
     <div class="form-group">

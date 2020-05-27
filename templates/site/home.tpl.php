@@ -1,2 +1,7 @@
-<h1>Bem vindo a pagina do melhor lava-jato de bebedouro</h1>
-<h3>Pagina inicial</h3>
+<h1><I>Bem vindo a página da melhor estética automotiva de bebedouro</i></h1>
+<br>
+<br>
+<br>
+<br>
+<h4>Aqui você encontra qualidade e preços incriveis</h4>
+<a href="/"></a>

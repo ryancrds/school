@@ -5,20 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<h1>, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <style>
-        .footer {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 60px;
-            line-height: 60px;
-            background-color: #f5f5f5;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/style.css">
     <title>Esteticar</title>
 </head>
 
 <body>
+    <div class="img-head">
+
+    </div>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">EstetiCar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,9 +28,15 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/contato">Contato</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/precos">Preços</a>
+                </li>
             </ul>
         </div>
     </nav>
+
+
+
     <div class="container">
         <?php include $content ?>
     </div>
@@ -50,4 +51,3 @@
 </body>
 
 </html>
-

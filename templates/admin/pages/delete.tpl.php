@@ -1,4 +1,4 @@
-<h3>Administraçao de paginas</h3>
+<h3>Del3te de paginas</h3>
 
 //remoçao
 

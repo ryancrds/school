@@ -50,3 +50,16 @@ trix-editor {
     height: 200%;
    font-style: oblique, italic;
 }
+
+.img-head{
+     background-image: url("/imagens/bom.png");
+     color: white;
+     flex-basis: 800px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     min-height: 450px;
+     background-position: 0px -115px ;
+     background-size: cover;
+     
+}
