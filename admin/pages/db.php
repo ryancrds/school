@@ -12,16 +12,17 @@ $pages_one = function($id) {
 };
 
 $pages_create = function() {
+ 
     //cadastra uma pagina
-    flash('Registro criado com sucesso', 'sucess');
+    flash('Registro criado com sucesso', 'success');
 };
 
 $pages_edit = function($id) {
     //atualiza uma pagina
-    flash('Atualizado com sucesso', 'sucess');
+    flash('Atualizado com sucesso', 'success');
 };
 
 $pages_delete = function() {
     //remove uma das paginas
-    flash('Removeu com sucesso', 'sucess');
+    flash('Deletado com sucesso', 'success');
 };

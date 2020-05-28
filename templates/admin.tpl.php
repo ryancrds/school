@@ -11,9 +11,6 @@
     <link rel="stylesheet" href="/resouces/trix/trix.css">
     <link rel="stylesheet" href="/css/style.css">
 
-
-
-
     <title>EstetiCar - ADM</title>
 </head>
 
@@ -50,9 +47,33 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="/resouces/trix/trix.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script>
         <?php flash(); ?>
+
+        const confirmE1 = document.querySelector('.confirm');
+        if (confirmE1) {
+            confirmE1.addEventListener('click', function(e) {
+                e.preventDefault();
+                Swal.fire({
+                    title: 'Tem certeza que deseja deletar isso?',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    cancelButtonText: 'Cancelar',
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Sim, quero deletar isso'
+                }).then((result) => {
+                    if (result.value) {
+                        window.location = e.target.getAttribute('href');
+                    }
+                })
+
+            });
+        }
     </script>
+
 </body>
 
 </html>

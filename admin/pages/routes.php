@@ -29,7 +29,7 @@ if (resolve('/admin/pages')) {
     }
     render('admin/pages/edit', 'admin');
 
-} elseif (resolve('/admin/pages/(\d+)/delete')) {
+} elseif ($params = resolve('/admin/pages/(\d+)/delete')) {
 
     $pages = $pages_delete($params[1]);
 
