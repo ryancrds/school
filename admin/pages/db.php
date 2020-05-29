@@ -24,9 +24,15 @@ $pages_all = function () use ($conn) {
     return $result->fetch_all(MYSQLI_ASSOC);
 };
 
-$pages_one = function ($id) {
-    //buscar unica as paginas
-    // select * from pages where id = ?
+$pages_one = function ($id) use ($conn) {
+   $sql = 'select * from pages where id = ?';
+   $stmt = $conn->prepare($sql);
+    $stmt->bind_param('i', $id );
+    $stmt->execute();
+
+    $result = $stmt->get_result();
+    return $result->fetch_assoc();
+   
     return ['title' => 'Titulo teste'];
 };
 
@@ -44,13 +50,11 @@ $pages_create = function () use ($conn) {
     );
 
 
-    flash('Registro criado com sucesso', 'success');
-
     return $stmt->execute();
 };
 
 $pages_edit = function ($id) use ($conn) {
-    //atualiza uma pagina
+    
     flash('Atualizado com sucesso', 'success');
 };
 

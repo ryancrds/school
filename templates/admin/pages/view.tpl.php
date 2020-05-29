@@ -12,9 +12,9 @@
 
 
             <dt class="col-sm-4">URL (link)</dt>
-            <dd class="col-sm-8"><a href="/" target="blank">
+            <dd class="col-sm-8"><a href="/<?php echo $data['page']['url'] ?>" target="blank">
                     <div class="alert alert-primary" role="alert">
-                        Abrir
+                    <?php echo $data['page']['url'] ?>
                     </div>
                 </a></dd>
 
@@ -22,7 +22,7 @@
             <dt class="col-sm-4">Criado em:</dt>
             <dd class="col-sm-8">
                 <div class="alert alert-primary" role="alert">
-                    Não definido!
+                <?php echo $data['page']['created'] ?>
                 </div>
             </dd>
 
@@ -30,7 +30,7 @@
             <dt class="col-sm-4"><i>Atualizado em:</i></dt>
             <dd class="col-sm-8">
                 <div class="alert alert-primary" role="alert">
-                    Em criaçao 3 or 54
+                <?php echo $data['page']['updated'] ?>
                 </div>
             </dd>
         </dl>

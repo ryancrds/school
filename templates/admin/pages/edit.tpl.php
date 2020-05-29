@@ -2,12 +2,12 @@
 
 <form action="" method="POST">
     <div class="form-group">
-        <label for="pagesTitle">Título</label>
+        <label for="pagesTitle"> <?php echo $data['page']['title'] ?></label>
         <input name="title" id="pagesTitle" type="text" class="form-control" placeholder="Aqui vai o título da página...">
     </div>
 
     <div class="form-group">
-        <label for="pagesUrl">URL</label>
+        <label for="pagesUrl"> <?php echo $data['page']['url'] ?></label>
         <div class="input-group">
             <div class="input-group-prepend">
                 <span class="input-group-text">/</span>
