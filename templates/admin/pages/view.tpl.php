@@ -36,14 +36,13 @@
         </dl>
     </div>
     <div class="col bg-light">
-        <h3>Pagina Inicial</h3>
-        <p>Está é a pagina Inicial</p>
+        <?php echo $data['page']['body'] ?>
     </div>
 </div>
 
 <p>
-    <a href="/admin/pages/1/edit" class="btn btn-primary">editar</a>
-    <a href="/admin/pages/1/delete" class="btn btn-danger confirm">remover</a>
+    <a href="/admin/pages/<?php echo $data['page']['id'] ?>/edit" class="btn btn-primary">editar</a>
+    <a href="/admin/pages/<?php echo $data['page']['id'] ?>/delete" class="btn btn-danger confirm">remover</a>
 </p>
 
 <a href="/admin/pages" class='btn btn-secondary'>Voltar</a>

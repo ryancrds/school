@@ -38,7 +38,7 @@
     <div class="container">
         <?php include $content ?>
     </div>
-    <footer class="footer">
+    <footer class="footer"> 
         <div class="container">
             <span class="text-muted">2017 - todos os direitos reservados</span>
         </div>

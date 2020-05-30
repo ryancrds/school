@@ -13,9 +13,23 @@
 </div>
 
 <div class="alert alert-primary" role="alert">
-  Polimento farol = R$50
+  Lavagem Completa Camionete= R$120
 </div>
-
 <div class="alert alert-primary" role="alert">
-  Lavagem Completa = R$60
+  Lavagem Completa Camionete= R$120
+</div>
+<div class="alert alert-primary" role="alert">
+  Lavagem Completa Camionete= R$120
+</div>
+<div class="alert alert-primary" role="alert">
+  Lavagem Completa Camionete= R$120
+</div>
+<div class="alert alert-primary" role="alert">
+  Lavagem Completa Camionete= R$120
+</div>
+<div class="alert alert-primary" role="alert">
+  Lavagem Completa Camionete= R$120
+</div>
+<div class="alert alert-primary" role="alert">
+  Lavagem Completa Camionete= R$120
 </div>
