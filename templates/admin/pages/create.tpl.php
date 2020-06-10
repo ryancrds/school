@@ -15,13 +15,20 @@
             <input name="url" id="pagesUrl" type="text" class="form-control" placeholder="URL Amigavel,Deixe em branco para deixar a pagina inicial...">
         </div>
 
+        <div class="form-group">
+        <label for="pagesTitle">Icon</label>
+        <input name="icon" id="icon" type="text" class="form-control" placeholder="Icone Font Awesome">
+    </div>
+
     </div>
 
     <!-- <br> -->
 
-    <div class="form-group margem-top">
-        <input id="pagesBody" type="hidden" name="body">
-        <trix-editor input="pagesBody"></trix-editor>
+    
+
+    <form method="post">
+      <textarea id="mytextarea"></textarea>
+    </form>
 
 
 

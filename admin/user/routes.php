@@ -1,6 +1,9 @@
 <?php
 
+// include __DIR__ . '/../../src/auth.php';
 include __DIR__ . '/db.php';
+ 
+
 
 if (resolve('/admin/users')) {
     $users = $users_all();

@@ -9,14 +9,15 @@ if (resolve('/admin/pages')) {
     render('admin/pages/index', 'admin', ['pages' => $pages]);
 
 } elseif (resolve('/admin/pages/create'))
- {
+{
     if ($_SERVER['REQUEST_METHOD']  === 'POST') {
-        $page = $pages_create();
-       return header('location: /admin/pages');
-   }
+
+        $pages = $pages_create();
+        return header('location: /admin/pages');
+    }
     render('admin/pages/create', 'admin');
 
-} elseif ($params = resolve('/admin/pages/(\d+)')) {
+}elseif ($params = resolve('/admin/pages/(\d+)')) {
      $page = $pages_one($params[1]);
     render('admin/pages/view', 'admin', ['page' => $page]);
 

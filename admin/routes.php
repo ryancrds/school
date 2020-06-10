@@ -1,9 +1,14 @@
 <?php
 
-if (resolve('/admin')) {
-    render('admin/home', 'admin',);
-} 
+auth_protection();
 
+if (resolve('/admin')) {
+    render('admin/home', 'admin');
+} 
+elseif (resolve('/admin/auth.*')) {
+
+    include __DIR__ . '/auth/routes.php';
+}
 elseif (resolve('/admin/pages.*')) {
 
     
@@ -16,11 +21,12 @@ elseif (resolve('/admin/user.*')) {
     include __DIR__ . '/user/routes.php';
 
 } 
+elseif (resolve('/admin/clientes.*')) {
 
+    
+    include __DIR__ . '/clientes/routes.php';
 
-
-
-
+} 
 
 else {
     http_response_code(404);

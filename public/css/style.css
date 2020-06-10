@@ -80,3 +80,8 @@ trix-editor {
 .container {
     height: 100%;
 }
+
+.foto {
+    border: 5px solid black;
+    width: 600px;
+}

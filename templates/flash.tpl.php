@@ -4,4 +4,4 @@ Swal.fire({
   title: '<?php echo $data['message'] ?>',
   showConfirmButton: false,
   timer: 1500
-})
+});

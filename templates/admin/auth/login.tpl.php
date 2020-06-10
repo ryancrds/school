@@ -1,4 +1,4 @@
-<!-- <div class="card bg-dark text-white">
+<div class="card bg-dark text-white">
     <div class="card-body">
         <h5 class="card-title">Autenticação</h5>
         <form method="post">
@@ -13,4 +13,4 @@
             <input type="submit" value="Acessar" class="btn btn-primary btn-lg">
         </form>
     </div>
-</div> -->
+</div>

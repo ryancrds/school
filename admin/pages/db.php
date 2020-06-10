@@ -5,6 +5,7 @@ function pages_get_data($redirectOnError)
     $title = filter_input(INPUT_POST, 'title');
     $url = filter_input(INPUT_POST, 'url');
     $body = filter_input(INPUT_POST, 'body');
+    $icon = filter_input(INPUT_POST, 'icon');
 
     if (is_null($title) or is_null($url)) {
         flash('Informe os campos de titulo e url', 'error');
@@ -15,7 +16,8 @@ function pages_get_data($redirectOnError)
     return compact(
         'title',
         'body',
-        'url'
+        'url',
+        'icon'
     );
 }
 
@@ -39,14 +41,15 @@ $pages_one = function ($id) use ($conn) {
 $pages_create = function () use ($conn) {
     $data = pages_get_data('/admin/pages/create');
 
-    $sql = 'INSERT INTO pages (title, body, url, updated, created) VALUES (?, ?, ?, NOW(), NOW() )';
+    $sql = 'INSERT INTO pages (title, body, url, icon, updated, created) VALUES (?, ?, ?, ?, NOW(), NOW() )';
 
     $stmt = $conn->prepare($sql);
     $stmt->bind_param(
-        'sss',
+        'ssss',
         $data['title'],
         $data['body'],
-        $data['url']
+        $data['url'],
+        $data['icon']
     );
 
 
@@ -56,14 +59,15 @@ $pages_create = function () use ($conn) {
 $pages_edit = function ($id) use ($conn) {
     $data = pages_get_data('/admin/pages/' . $id . '/edit');
 
-    $sql = 'UPDATE pages SET title=?, body=?, url=?, updated=NOW() WHERE id=?';
+    $sql = 'UPDATE pages SET title=?, body=?, url=?, icon=?, updated=NOW() WHERE id=?';
 
     $stmt = $conn->prepare($sql);
     $stmt->bind_param(
-        'sssi',
+        'ssssi',
         $data['title'],
         $data['body'],
         $data['url'],
+        $data['icon'],
         $id
     );
 

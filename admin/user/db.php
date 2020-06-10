@@ -55,7 +55,7 @@ $users_edit = function ($id) use ($conn) {
 
     if ($data['password']) {
         $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
-        $sql = 'UPDATE users set email=?, password=?, updated=NOW(), created=NOW() WHERE id=?';
+        $sql = 'UPDATE users set email=?, password=?, updated=NOW() WHERE id=?';
     }
 
     $stmt = $conn->prepare($sql);
